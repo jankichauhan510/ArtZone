@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 0;
+            overflow-x: hidden;
+
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .navbar {
+            height: 10vh;
+            width: 100vw;
+            position: sticky;
+            background-color: #8f7a6a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .navbar a {
+            font-size: 1.1vw;
+            margin-right: 3%;
+            color: white;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+            color: white;
+        }
+
+        .art {
+            color: white;
+            font-size: 2.5vw;
+            margin-left: 5%;
+            width: 60%;
+
+        }
+
+        .title {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1.5vw;
+            font-style: italic;
+            text-align: center;
+            margin-top: 5%;
+            color: #8f7a6a;
+        }
+
+        .head {
+            font-size: 1.5vw;
+            font-weight: 400;
+            color: #8f7a6a;
+            padding-left: 5%;
+        }
+
+        .blog {
+            font-style: italic;
+        }
+        .text{
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+        footer {
+            height: 400px;
+            margin-top: 10%;
+            background-color: #4d3831;
+           display: flex;
+           justify-content: space-evenly;
+          
+
+        }
+        footer li{
+            list-style: none;
+            
+        }
+        footer ul{
+            padding-top: 10%;
+            
+        }
+        footer a{
+            color: white;
+            text-decoration: none;
+            margin-top: 10%;
+        }
+        footer a:hover{
+            text-decoration: underline;
+
+        }
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px;
+            }
+
+            .art {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+
+            .navbar a {
+                margin-right: 0;
+                margin-bottom: 10px;
+                font-size: 18px;
+            }
+
+            .title {
+                font-size: 20px;
+            }
+
+            .head {
+                font-size: 18px;
+            }
+
+            .blog {
+                font-size: 16px;
+            }
+
+            .text {
+                padding: 0 3%;
+            }
+
+            footer {
+                padding: 20px 0;
+            }
+
+            footer ul {
+                flex: 1;
+                text-align: center;
+                padding: 0;
+            }
+
+            footer a {
+                font-size: 16px;
+            }
+            @media (max-width: 480px) {
+            .navbar {
+                padding: 10px;
+            }
+
+            .navbar a {
+                font-size: 16px;
+            }
+
+            .title {
+                font-size: 18px;
+            }
+
+            .head {
+                font-size: 16px;
+            }
+
+            .blog {
+                font-size: 14px;
+            }
+
+            .text {
+                padding: 0 2%;
+            }
+
+            footer {
+                padding: 10px 0;
+            }
+
+            footer ul {
+                padding: 0;
+            }
+
+            footer a {
+                font-size: 14px;
+            }
+        }
+        }
+
+    
+
+    
+      
+       
+    </style>
+</head>
+
+<body>
+<?php include('header.php');?>
+
+    <section class="blog">
+        <p>
+        <p class="title">Empowering Small Businesses: Your One-Stop Shop for Local Treasures</p><br><br>
+
+        <div class="text">
+            In a world dominated by giant corporations and global e-commerce giants, it's easy to overlook the charm and
+        uniqueness of small-scale businesses. These local gems not only add character to our neighborhoods but also
+        offer products that often can't be found in mainstream markets. However, for small businesses to thrive, they
+        need a platform where they can connect with customers who appreciate their craftsmanship and dedication. That's
+        where our website comes into
+        </div> <br><br>
+
+        <p class="head">Small Scale Business, Big Dreams</p> <br><br>
+        <div class="text">
+        The backbone of any economy, small-scale businesses play a vital role in fostering innovation, creating job
+        opportunities, and contributing to local economies. From artisanal bakeries and boutique clothing stores to
+        handmade jewelry and specialty coffee shops, these businesses enrich our communities and diversify our shopping
+        experiences.
+        </div>
+        <br><br>
+        <p class="head">The Challenge for Small Businesses</p> <br><br>
+        <div class="text">  
+        While the passion and dedication of small business owners are undeniable, they often face significant challenges
+        in reaching a wider customer base: <br>
+
+        1.Limited Online Presence: Many small businesses lack the resources or technical expertise to establish a strong
+        online presence, making it difficult for potential customers to discover them. <br>
+
+        2.Marketing Constraints: Budget constraints often restrict small businesses from running extensive marketing
+        campaigns, limiting their reach and visibility. <br>
+
+        3.E-commerce Barriers: Setting up an e-commerce platform can be daunting and expensive for small businesses,
+        leading them to miss out on potential sales opportunities. <br>
+        </div>
+        <br><br>
+        <p class="head">Our Solution: A Marketplace for Local Treasures</p> <br><br>
+        <div class="text">
+        Our website is designed to bridge the gap between small-scale businesses and customers who seek unique,
+        locally-made products. Here's how we make it happen: <br>
+
+        1.Easy Store Setup: We provide an intuitive platform for small businesses to create their online stores with
+        minimal effort. No technical expertise is required; just a passion for what they do. <br>
+
+        2.Exposure Through Marketing: Our website actively promotes the products and stories of our sellers through
+        various marketing channels, giving them the exposure they deserve. <br>
+
+        3.Secure and User-Friendly: Customers can shop with confidence, knowing that their transactions are secure, and
+        they're supporting local businesses. Our user-friendly interface makes finding and purchasing products a breeze. <br>
+
+        4.Community Building: We foster a sense of community among our customers and sellers. Buyers can interact with
+        sellers, leave reviews, and share their favorite finds with friends and family. <br>
+    </div>
+        <br><br>
+        <p class="head">Why Shop on Our Website?</p> <br><br>
+
+        <div class="text">
+        When you choose to shop on our website, you're not just buying products; you're investing in your community and
+        helping small businesses flourish. Here are some compelling reasons to give it a try: <br>
+
+        1.Unique Products: Discover one-of-a-kind items that you won't find in mainstream stores. From handmade crafts
+        to specialty foods, our marketplace is a treasure trove of local gems. <br>
+
+        2.Support Local Economy: Your purchases directly benefit local entrepreneurs and artisans, helping them sustain
+        their businesses and create more job opportunities in your area. <br>
+
+        3.Personalized Service: Enjoy a more personalized shopping experience with direct access to sellers who are
+        passionate about their products and eager to assist you. <br>
+
+        4.Environmental Benefits: Supporting local businesses can reduce the environmental impact associated with
+        large-scale production and long-distance shipping. <br>
+        </div>
+        <br><br>
+        <p class="head">Join the Local Revolution</p> <br><br>
+        <div class="text">
+
+        In a world of global giants, it's time to celebrate and uplift the small-scale businesses that make our
+        communities vibrant and unique. Join us in supporting local entrepreneurs, discovering hidden treasures, and
+        building stronger, more resilient communities through the power of small business.
+
+        Whether you're a small business owner looking to expand your reach or a customer in search of something special,
+        our website is your go-to destination. Let's make a difference together, one local treasure at a time. Start
+        exploring and start supporting today!
+    </div>
+
+    </section>
+
+
+    
+    <?php include('footer.php');?>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+
+</html>

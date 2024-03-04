@@ -1,0 +1,25 @@
+h1{
+background-image:  radial-gradient(ellipse,blue, whitesmoke);
+height: 100;
+width: 100;
+padding-left: 45px;
+font-family: sans-serif;
+text-align: center;
+color: chartreuse;
+}
+
+
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+  }

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ART ZONE</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 0;
+            overflow-x: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .carousel {
+            height: 80vh;
+            width: 100vw;
+            position: relative;
+
+        }
+
+        .slide {
+            opacity: 0;
+            inset: 0;
+            position: absolute;
+            transition: 200ms opacity ease-in-out;
+            transition-delay: 200ms;
+        }
+
+        .slide[data-active] {
+            opacity: 1;
+            z-index: 1;
+            transition-delay: 0ms;
+        }
+
+        .slide>img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .carousel-button-prev,
+        .carousel-button-next {
+            position: absolute;
+            z-index: 2;
+            background: none;
+            border: none;
+            font-size: 4rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255, 255, 255, .5);
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: rgba(0, 0, 0, .1);
+        }
+
+        .carousel-button-prev:hover,
+        .carousel-button:focus {
+            color: white;
+            background-color: rgba(0, 0, 0, .2);
+
+        }
+
+        .carousel-button-next:hover,
+        .carousel-button:focus {
+            color: white;
+            background-color: rgba(0, 0, 0, .2);
+
+        }
+
+        .carousel-button-prev {
+            left: 1rem;
+        }
+
+        .carousel-button-next {
+            right: 1rem;
+        }
+
+
+        .navbar {
+            height: 10vh;
+            width: 100vw;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #8f7a6a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .art {
+            color: white;
+            font-size: 2.5vw;
+            margin-left: 5%;
+            width: 55%;
+
+        }
+
+        .navbar a {
+            font-size: 1.1vw;
+            margin-right: 3%;
+            color: white;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+            color: white;
+        }
+
+        .explore {
+            background-color: #8f7a6a;
+            height: 58vh;
+            width: 100vw;
+
+        }
+
+        .explore h1 {
+            text-align: center;
+            font-size: 1.5vw;
+            font-weight: 400;
+            color: white;
+            padding-top: 1%;
+
+        }
+
+        .mini {
+            height: 40vh;
+            width: 90vw;
+            margin: auto;
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 1.5%;
+        }
+
+        .sizes {
+            height: 40vh;
+            width: 25vw;
+
+
+        }
+
+        .one img {
+            height: 40vh;
+            width: 25vw;
+            background-size: cover;
+            background-position: center center;
+            border-radius: 10px;
+        }
+
+        .one img:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        .two img:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        .three img:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        .two img {
+            height: 40vh;
+            width: 25vw;
+            background-size: cover;
+            background-position: center center;
+            border-radius: 10px;
+        }
+
+        .three img {
+            height: 40vh;
+            width: 25vw;
+            background-size: cover;
+            background-position: center center;
+            border-radius: 10px;
+        }
+
+        .explore p {
+            margin-left: 30%;
+            color: white;
+            font-size: 1.3vw;
+            margin-top: 4%;
+        }
+
+        .about {
+            background-color: #d1bcab;
+            height: 65vh;
+
+        }
+
+        .about h1 {
+            text-align: center;
+            color: white;
+            font-weight: 400;
+            padding-top: 2%;
+        }
+
+        .information {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .information p {
+            width: 50vw;
+            margin-left: 10%;
+            color: white;
+        }
+
+        .cnt {
+            height: 50vh;
+            width: 20vw;
+            margin-top: 1%;
+
+        }
+
+        .cnt img {
+            height: 50vh;
+            width: 20vw;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        .more {
+            height: 5vh;
+            width: 8vw;
+            font-size: 1.2vw;
+            position: relative;
+            left: 40%;
+            bottom: 7%;
+            border: none;
+            background-color: #8f7a6a;
+            color: white;
+            cursor: pointer;
+        }
+
+        .contact {
+            height: 100vh;
+            background-image: url("contact-img.jpg");
+            background-size: cover;
+            background-color: #8f7a6a;
+
+        }
+
+        .contact h3 {
+            font-size: 2.5vw;
+            font-weight: 300;
+            padding: 4%;
+            color: black;
+            text-decoration: none;
+        }
+
+        .contact h4 {
+            text-align: center;
+            font-weight: 300;
+            font-size: 1.5vw;
+            opacity: 1;
+            color: black;
+            text-decoration: none;
+
+        }
+
+        .contact p {
+            text-align: center;
+            opacity: 1;
+            font-size: 2vw;
+            font-weight: 300;
+            color: black;
+            text-decoration: none;
+
+        }
+
+        #name {
+            height: 4vh;
+            width: 20vw;
+            border-radius: 2px;
+            border: 1px solid rgb(181, 175, 175);
+            margin-top: 3%;
+        }
+
+        #email {
+
+            height: 4vh;
+            width: 20vw;
+            border-radius: 2px;
+            border: 1px solid rgb(181, 175, 175);
+            margin-top: 1%;
+        }
+
+        #mess {
+            border-radius: 2px;
+            margin-top: 1%;
+            border: 1px solid rgb(181, 175, 175);
+        }
+
+        #name,
+        #email,
+        #mess {
+            margin-left: 40%;
+        }
+
+        .send {
+            height: 4vh;
+            width: 6vw;
+            border-radius: 2px;
+            margin-top: 3%;
+            background-color: #937d6d;
+            color: white;
+            border: none;
+            margin-left: 47%;
+            cursor: pointer;
+
+        }
+
+        footer {
+            height: 400px;
+            background-color: #4d3831;
+           display: flex;
+           justify-content: space-evenly;
+          
+
+        }
+        footer li{
+            list-style: none;
+            
+        }
+        footer ul{
+            padding-top: 10%;
+            
+        }
+        footer a{
+            color: white;
+            text-decoration: none;
+            margin-top: 10%;
+        }
+        footer a:hover{
+            text-decoration: underline;
+
+        }
+
+        .more a {
+            text-decoration: none;
+            color: white;
+        }
+
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 10px;
+            }
+
+            .art {
+                font-size: 4vw;
+            }
+
+            .navbar a {
+                font-size: 2vw;
+            }
+
+            .carousel-button-prev,
+            .carousel-button-next {
+                font-size: 6vw;
+            }
+
+            .explore h1 {
+                font-size: 4vw;
+            }
+
+            .sizes {
+                flex-basis: calc(50% - 20px);
+            }
+
+            .about h1 {
+                font-size: 4vw;
+            }
+
+            .information p {
+                flex-basis: 100%;
+            }
+
+            .cnt {
+                flex-basis: 100%;
+            }
+
+            .more {
+                font-size: 2vw;
+                padding: 2vw 4vw;
+                left: 30%;
+                bottom: 10%;
+            }
+
+            .contact h3,
+            .contact h4,
+            .contact p {
+                font-size: 4vw;
+            }
+
+            #name,
+            #email,
+            #mess {
+                width: 100%;
+                max-width: none;
+                font-size: 3vw;
+            }
+
+            .send {
+                width: 50%;
+                max-width: none;
+                font-size: 3vw;
+                padding: 2vw;
+            }
+
+            footer a {
+                font-size: 2vw;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar {
+                padding: 5px;
+            }
+
+            .art {
+                font-size: 6vw;
+            }
+
+            .navbar a {
+                font-size: 3vw;
+            }
+
+            .carousel-button-prev,
+            .carousel-button-next {
+                font-size: 8vw;
+            }
+
+            .explore h1 {
+                font-size: 5vw;
+            }
+
+            .sizes {
+                flex-basis: calc(100% - 20px);
+            }
+
+            .about h1 {
+                font-size: 5vw;
+            }
+
+            .information p {
+                flex-basis: 100%;
+            }
+
+            .cnt {
+                flex-basis: 100%;
+            }
+
+            .more {
+                font-size: 3vw;
+                padding: 3vw 6vw;
+                left: 20%;
+                bottom: 15%;
+            }
+
+            .contact h3,
+            .contact h4,
+            .contact p {
+                font-size: 6vw;
+            }
+
+            #name,
+            #email,
+            #mess {
+                width: 100%;
+                max-width: none;
+                font-size: 4vw;
+            }
+
+            .send {
+                width: 70%;
+                max-width: none;
+                font-size: 4vw;
+                padding: 3vw;
+            }
+
+            footer a {
+                font-size: 3vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+     <nav class="navbar">
+        <h1 class="art">ArtZone</h1>
+        <a href="index.php">Home</a>
+        <a href="login.php">Login</a>
+        <a href="signup.php">Register</a>
+        <a href="about.php">About Us</a>
+        <a href="blog.php">Blog</a>
+    </nav> 
+</body>

@@ -1,0 +1,288 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+
+nav {
+  height: 80px;
+  width: 100%;
+  background-color: mediumpurple;
+  color: black;
+
+
+}
+
+label.logo {
+  font-size: 35px;
+  font-weight: bold;
+  color: whit;
+  padding: 0 100px;
+  line-height: 80px;
+}
+
+nav ul {
+  float: right;
+  margin-right: 40px;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 8px;
+  line-height: 80px;
+}
+
+nav li a img {
+  max-height: 50px;
+  max-width: 60px;
+
+  border-radius: 100%;
+  border: 3px double solid white;
+}
+
+nav a {
+
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  padding: 7px 10px;
+  border-radius: 3px;
+}
+
+a.active,
+a:hover {
+  border: 1px solid green;
+  transition: .5s;
+
+}
+
+nav #icon {
+  color: white;
+  font-size: 30px;
+  line-height: 80px;
+  float: right;
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+@media (max-width:1048px) {
+
+  label.logo {
+    font-size: 32px;
+    padding-left: 30px;
+
+  }
+
+  nav ul {
+    margin-right: 20px;
+  }
+
+  nav a {
+    font-size: 17px;
+  }
+}
+
+
+@media (max-width:909px) {
+  nav #icon {
+    display: block;
+  }
+
+  nav ul {
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    background: #2f3640;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+    overflow: auto;
+    z-index: 300;
+
+  }
+
+  .logo {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  nav li a {
+    font-size: 20px;
+    color: white;
+  }
+
+  a.active,
+  a:hover {
+    border: none;
+    color: mediumpurple;
+
+  }
+
+  nav ul.show {
+    left: 0;
+  }
+
+  ;
+
+}
+
+.w3-teal,
+.w3-hover-teal:hover {
+  color: #CF9FFF;
+  background-color: ghostwhite;
+}
+
+/* content */
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px 50px;
+  padding: 30px;
+}
+
+.container .card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 219px;
+  background: wheat;
+  height: 280px;
+  border-radius: 30px;
+  box-shadow: 0 5px 80px rgba(0, 0, 0, 0.15);
+  transition: 0.5s ease-in-out;
+  flex-direction: column;
+  margin: 30px 10px;
+  padding: 20px 15px;
+
+}
+
+.conatiner .card:hover {
+  height: 60px;
+}
+
+.conatiner .card .imgbx {
+  width: 220px;
+  height: 280px;
+  top: -30px;
+  left: 50px;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  position: relative;
+  z-index: 1;
+  transition: o.5s;
+
+
+}
+
+.container .card .imgbx img {
+  width: 170px;
+  height: 180px;
+  border-radius: 50%;
+  max-width: 280px;
+  align-items: center;
+  justify-items: center;
+
+}
+
+.container .card .imgbx h5 {
+  color: white;
+  background-color: mediumpurple;
+  border-radius: 50px;
+}
+
+
+.container .card .content {
+  position: relative;
+  margin-top: -140px;
+  padding: 10px 15px;
+  text-align: center;
+  color: white;
+  font-family: monospace;
+  visibility: hidden;
+  transition: 0.4s ease-in-out;
+}
+
+.container .card:hover .content {
+  visibility: visible;
+  opacity: 1;
+  margin-top: -10px;
+}
+
+.container .card:hover .content button {
+  visibility: visible;
+  opacity: 1;
+  margin-top: -10px;
+  background-color: mediumorchid;
+  border-radius: 50px;
+  border-color: mediumorchid;
+  color: white;
+}
+
+.artist {
+  height: 50%;
+  width: 70%;
+  box-shadow: 20px 20px 50px mediumpurple;
+  background-color: #584c70;
+  color: white;
+  font-weight: bold;
+  margin-top: 2%;
+  text-align: center;
+  justify-content: center;
+  margin-left: 15%;
+}
+
+.art {
+
+  height: 50%;
+  width: 100%;
+  box-shadow: 20px 20px 50px mediumpurple;
+  background-color: mediumpurple;
+  color: white;
+  font-weight: bold;
+  margin-top: 2%;
+  text-align: center;
+  justify-content: center;
+
+}
+
+
+.popup {
+  width: 50%;
+  height: 50%;
+  background-color: white;
+  border-radius: 6px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  text-align: center;
+  padding: 0 30px 30px;
+  color: #333;
+  visibility: hidden;
+  transition: transform 0.4s, 0.4s;
+  padding-top: 5%;
+}
+
+.open-popup {
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  z-index: 3;
+}
